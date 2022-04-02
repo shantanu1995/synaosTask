@@ -1,0 +1,7 @@
+{
+  "interfaceOnly": true,
+  "skipDefaultInterface": true,
+  "dateLibrary": "java8",
+  "apiPackage": "synaos.calendar.api",
+  "modelPackage": "synaos.calendar.dtos"
+}

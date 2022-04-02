@@ -1,0 +1,38 @@
+components:
+  schemas:
+    ErrorData:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        detail:
+          type: string
+    SuccessMessage:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+        errorMessage:
+          type: string
+
+  responses:
+    400Error:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorData"
+    500Error:
+      description: A server error occurred
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorData"
+

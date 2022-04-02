@@ -1,0 +1,15 @@
+synaos\Application.class
+synaos\calendar\util\CalendarUtil.class
+synaos\calendar\dtos\CalendarDto.class
+synaos\calendar\dtos\CalendarDtoAllOf.class
+synaos\calendar\CalendarController.class
+synaos\calendar\data\CalendarRepository.class
+synaos\calendar\dtos\CelebrationDto.class
+synaos\calendar\dtos\ErrorData.class
+synaos\calendar\dtos\BaseCalendarDto.class
+synaos\calendar\dtos\BaseCelebrationDto.class
+synaos\calendar\dto\DateDto.class
+synaos\calendar\data\CelebrationsRepository.class
+synaos\calendar\dtos\TotalCalendarDto.class
+synaos\calendar\dtos\CelebrationDtoAllOf.class
+synaos\calendar\api\TestApi.class

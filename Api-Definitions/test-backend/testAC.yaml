@@ -1,0 +1,157 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Calendar API
+  description: API for maintaining Calendar
+security:
+  - bearerAuth: [ ]
+
+paths:
+  /test/calendar:
+    get:
+      operationId: getCalendar
+      description: Returns all Calendar with their data
+      parameters:
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: All Calendar data for the queried date returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TotalCalendarDto'
+        '500':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/500Error'
+
+    post:
+      operationId: createCalendar
+      description: create a new Calendar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BaseCalendarDto'
+      responses:
+        '201':
+          description: New Calendar created and returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalendarDto'
+        '400':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/400Error'
+        '500':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/500Error'
+
+  /test/calendar/{calendarId}:
+    parameters:
+      - name: calendarId
+        in: path
+        required: true
+        schema:
+          type: integer
+        description: The Calendar id
+
+    put:
+      operationId: updateCalendarById
+      description: Modify a Calendar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BaseCalendarDto'
+      responses:
+        '200':
+          description: Calendar modified and returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalendarDto'
+        '400':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/400Error'
+        '500':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/500Error'
+
+    delete:
+      operationId: deleteCalendarById
+      description: Delete a Calendar
+      responses:
+        '204':
+          description: Deletion request was successfully executed
+        '400':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/400Error'
+        '500':
+          $ref: '../APIBaseComponents.yaml/#/components/responses/500Error'
+
+
+components:
+
+  schemas:
+    TotalCalendarDto:
+      type: object
+      properties:
+        totalRecords:
+          type: integer
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/CalendarDto'
+    BaseCalendarDto:
+      type: object
+      properties:
+        date:
+          type: string
+        season:
+          type: string
+        seasonWeek:
+          type: integer
+        weekday:
+          type: string
+        CelebrationList:
+          type: array
+          items:
+            $ref: '#/components/schemas/CelebrationDto'
+      discriminator:
+        propertyName: className
+
+    BaseCelebrationDto:
+      type: object
+      properties:
+        title:
+          type: string
+        colour:
+          type: string
+        rank:
+          type: integer
+        rankNo:
+          type: number
+          format: double
+        Calendar:
+          $ref: '#/components/schemas/CalendarDto'
+
+    CelebrationDto:
+      allOf:
+        - $ref: '#/components/schemas/BaseCelebrationDto'
+        - type: object
+          properties:
+            id:
+              type: integer
+
+    CalendarDto:
+      allOf:
+        - $ref: '#/components/schemas/BaseCalendarDto'
+        - type: object
+          required:
+            - id
+            - deletable
+          properties:
+            id:
+              type: integer
+            deletable:
+              type: boolean
