@@ -1,0 +1,2 @@
+# synaosTask
+Task for SYNAOS
