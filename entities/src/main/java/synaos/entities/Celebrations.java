@@ -22,8 +22,16 @@ public class Celebrations implements ParentEntity {
     @Column
     private String colour;
 
+    public String getRanker() {
+        return ranker;
+    }
+
+    public void setRanker(String ranker) {
+        this.ranker = ranker;
+    }
+
     @Column
-    private int ranker;
+    private String ranker;
 
     public String getTitle() {
         return title;
@@ -39,14 +47,6 @@ public class Celebrations implements ParentEntity {
 
     public void setColour(String colour) {
         this.colour = colour;
-    }
-
-    public int getRank() {
-        return ranker;
-    }
-
-    public void setRank(int rank) {
-        this.ranker = rank;
     }
 
     public double getRankNo() {

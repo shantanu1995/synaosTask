@@ -127,8 +127,8 @@ components:
           type: string
         colour:
           type: string
-        rank:
-          type: integer
+        ranker:
+          type: string
         rankNo:
           type: number
           format: double

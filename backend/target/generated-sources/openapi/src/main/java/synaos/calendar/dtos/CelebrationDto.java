@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
 /**
  * CelebrationDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-04-02T23:19:25.481089+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-04-04T00:24:03.026534800+02:00[Europe/Berlin]")
 public class CelebrationDto   {
   @JsonProperty("title")
   private String title;
@@ -23,8 +23,8 @@ public class CelebrationDto   {
   @JsonProperty("colour")
   private String colour;
 
-  @JsonProperty("rank")
-  private Integer rank;
+  @JsonProperty("ranker")
+  private String ranker;
 
   @JsonProperty("rankNo")
   private Double rankNo;
@@ -75,24 +75,24 @@ public class CelebrationDto   {
     this.colour = colour;
   }
 
-  public CelebrationDto rank(Integer rank) {
-    this.rank = rank;
+  public CelebrationDto ranker(String ranker) {
+    this.ranker = ranker;
     return this;
   }
 
   /**
-   * Get rank
-   * @return rank
+   * Get ranker
+   * @return ranker
   */
   @ApiModelProperty(value = "")
 
 
-  public Integer getRank() {
-    return rank;
+  public String getRanker() {
+    return ranker;
   }
 
-  public void setRank(Integer rank) {
-    this.rank = rank;
+  public void setRanker(String ranker) {
+    this.ranker = ranker;
   }
 
   public CelebrationDto rankNo(Double rankNo) {
@@ -168,7 +168,7 @@ public class CelebrationDto   {
     CelebrationDto celebrationDto = (CelebrationDto) o;
     return Objects.equals(this.title, celebrationDto.title) &&
         Objects.equals(this.colour, celebrationDto.colour) &&
-        Objects.equals(this.rank, celebrationDto.rank) &&
+        Objects.equals(this.ranker, celebrationDto.ranker) &&
         Objects.equals(this.rankNo, celebrationDto.rankNo) &&
         Objects.equals(this.calendar, celebrationDto.calendar) &&
         Objects.equals(this.id, celebrationDto.id);
@@ -176,7 +176,7 @@ public class CelebrationDto   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, colour, rank, rankNo, calendar, id);
+    return Objects.hash(title, colour, ranker, rankNo, calendar, id);
   }
 
   @Override
@@ -186,7 +186,7 @@ public class CelebrationDto   {
     
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    colour: ").append(toIndentedString(colour)).append("\n");
-    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
+    sb.append("    ranker: ").append(toIndentedString(ranker)).append("\n");
     sb.append("    rankNo: ").append(toIndentedString(rankNo)).append("\n");
     sb.append("    calendar: ").append(toIndentedString(calendar)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

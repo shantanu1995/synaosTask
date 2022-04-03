@@ -42,7 +42,7 @@ public class CalendarUtil {
         dto.setId(celebrations.getId());
         dto.setTitle(celebrations.getTitle());
         dto.setColour(celebrations.getColour());
-        dto.setRank(celebrations.getRank());
+        dto.setRanker(celebrations.getRanker());
         dto.setRankNo(celebrations.getRankNo());
 
         return dto;

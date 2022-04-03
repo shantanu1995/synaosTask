@@ -1,7 +1,7 @@
 package synaos.calendar;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import synaos.calendar.api.TestApi;
 import synaos.calendar.data.CalendarRepository;
@@ -32,18 +32,21 @@ public class CalendarController implements TestApi {
     }
 
     @Override
+    @CrossOrigin(origins = "*")
     public ResponseEntity<CalendarDto> createCalendar(@Valid BaseCalendarDto baseCalendarDto) {
 
         return ResponseEntity.ok(CalendarUtil.createDtoFromEntity(calendarRepository.save(saveDtoValueInEntity(new Calendar(), baseCalendarDto))));
     }
 
     @Override
+    @CrossOrigin(origins = "*")
     public ResponseEntity<Void> deleteCalendarById(Integer calendarId) {
         calendarRepository.deleteById(calendarId.longValue());
         return ResponseEntity.noContent().build();
     }
 
     @Override
+    @CrossOrigin(origins = "*")
     public ResponseEntity<TotalCalendarDto> getCalendar(@Valid String date) {
         List<Calendar> entityList = new ArrayList<>();
         if(date != null && !date.isEmpty()){
@@ -62,6 +65,7 @@ public class CalendarController implements TestApi {
     }
 
     @Override
+    @CrossOrigin(origins = "*")
     public ResponseEntity<CalendarDto> updateCalendarById(Integer calendarId, @Valid BaseCalendarDto baseCalendarDto) {
         var entityOptional = calendarRepository.findById(calendarId.longValue());
         Calendar calendar = new Calendar();
@@ -84,7 +88,7 @@ public class CalendarController implements TestApi {
             var dto = celebrationDtoList.get(i);
             entity.setTitle(dto.getTitle());
             entity.setColour(dto.getColour());
-            entity.setRank(dto.getRank());
+            entity.setRanker(dto.getRanker());
             entity.setRankNo(dto.getRankNo());
 
             entityList.add(celebrationsRepository.save(entity));

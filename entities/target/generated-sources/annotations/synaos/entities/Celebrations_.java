@@ -11,7 +11,7 @@ public abstract class Celebrations_ {
 	public static volatile SingularAttribute<Celebrations, Calendar> calendar;
 	public static volatile SingularAttribute<Celebrations, String> colour;
 	public static volatile SingularAttribute<Celebrations, Integer> id;
-	public static volatile SingularAttribute<Celebrations, Integer> ranker;
+	public static volatile SingularAttribute<Celebrations, String> ranker;
 	public static volatile SingularAttribute<Celebrations, String> title;
 	public static volatile SingularAttribute<Celebrations, Double> rankNo;
 
