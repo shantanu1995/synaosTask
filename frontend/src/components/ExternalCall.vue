@@ -47,6 +47,7 @@ export default defineComponent({
   },
   methods: {
     handleClick(): void {
+      const temp = this.url;
       this.url = this.url + this.value;
       console.log(this.url);
       axios.get(this.url).then((response) => {
@@ -70,11 +71,12 @@ export default defineComponent({
       });
 
       console.log(this.info);
+      this.url = temp;
     },
     saveToDatabase(): void {
       const axiosInstance: AxiosInstance = axios.create({
         headers: {
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
         },
       });
       const api: DefaultApi = new DefaultApi(
