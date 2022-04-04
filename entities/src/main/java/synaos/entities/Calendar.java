@@ -71,7 +71,7 @@ public class Calendar implements ParentEntity{
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    @OneToMany(mappedBy = "calendar", targetEntity = Celebrations.class)
+    @OneToMany(mappedBy = "calendar", targetEntity = Celebrations.class, cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Celebrations> celebrationsList = new ArrayList<>();
 
     @Override

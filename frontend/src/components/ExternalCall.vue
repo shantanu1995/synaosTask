@@ -17,7 +17,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import axios, { AxiosInstance, AxiosRequestHeaders } from "axios";
+import axios, { AxiosInstance } from "axios";
 
 import { DefaultApi } from "@/base-frontend/api/default-api";
 

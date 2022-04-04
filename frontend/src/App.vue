@@ -1,20 +1,41 @@
 <template>
-  <img alt="Synaos logo" src="./assets/Synaos.png">
-  <HelloWorld msg="SYNAOS Task"/>
-  <ExternalCall/>
+  <img alt="Synaos logo" src="./assets/Synaos.png" />
+  <HelloWorld msg="SYNAOS Task" />
+
+  <div>
+    <router-link class="nav-link" to="/external" @click="onClick()">External</router-link>
+    <router-link class="nav-link" to="/internal" @click="onClick()">Internal</router-link>
+  </div>
+  <div>
+    <a href="" @click="hide()">Hide</a>
+  </div>
+  <router-view v-if="value"></router-view>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-import ExternalCall from './components/ExternalCall.vue'
+import { defineComponent } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld,
-    ExternalCall
-  }
+  },
+  data: () => {
+    return {
+      value: false
+    };
+  },
+  methods: {
+    onClick(): void{
+      this.value = true;
+    },
+
+    hide(): void{
+      this.value = false;
+    }
+
+  },
 });
 </script>
 

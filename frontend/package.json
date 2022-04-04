@@ -13,7 +13,8 @@
     "cors": "^2.8.5",
     "primeicons": "^5.0.0",
     "primevue": "^3.4.0",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",

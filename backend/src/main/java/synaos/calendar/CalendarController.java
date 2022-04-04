@@ -41,7 +41,7 @@ public class CalendarController implements TestApi {
     @Override
     @CrossOrigin(origins = "*")
     public ResponseEntity<Void> deleteCalendarById(Integer calendarId) {
-        calendarRepository.deleteById(calendarId.longValue());
+        calendarRepository.deleteById(calendarId);
         return ResponseEntity.noContent().build();
     }
 
@@ -67,7 +67,7 @@ public class CalendarController implements TestApi {
     @Override
     @CrossOrigin(origins = "*")
     public ResponseEntity<CalendarDto> updateCalendarById(Integer calendarId, @Valid BaseCalendarDto baseCalendarDto) {
-        var entityOptional = calendarRepository.findById(calendarId.longValue());
+        var entityOptional = calendarRepository.findById(calendarId);
         Calendar calendar = new Calendar();
         if(entityOptional.isPresent()){
             calendar = entityOptional.get();
@@ -75,7 +75,7 @@ public class CalendarController implements TestApi {
         return ResponseEntity.ok(CalendarUtil.createDtoFromEntity(calendarRepository.save(saveDtoValueInEntity(calendar, baseCalendarDto))));
     }
 
-    private List<Celebrations> saveCelebrationValue(List<Celebrations> celebrationsList, List<CelebrationDto> celebrationDtoList){
+    private List<Celebrations> saveCelebrationValue(List<Celebrations> celebrationsList, List<CelebrationDto> celebrationDtoList, Calendar calendar){
 
         var entityList = new ArrayList<Celebrations>();
 
@@ -90,6 +90,7 @@ public class CalendarController implements TestApi {
             entity.setColour(dto.getColour());
             entity.setRanker(dto.getRanker());
             entity.setRankNo(dto.getRankNo());
+            entity.setCalendar(calendar);
 
             entityList.add(celebrationsRepository.save(entity));
         }
@@ -103,7 +104,8 @@ public class CalendarController implements TestApi {
         calendar.setSeason(calendarDto.getSeason());
         calendar.setSeasonWeek(calendarDto.getSeasonWeek());
         calendar.setWeekday(calendarDto.getWeekday());
-        calendar.setCelebrationsList(saveCelebrationValue(calendar.getCelebrationsList(),calendarDto.getCelebrationList()));
+        calendar = calendarRepository.save(calendar);
+        calendar.setCelebrationsList(saveCelebrationValue(calendar.getCelebrationsList(),calendarDto.getCelebrationList(), calendar));
 
         return calendar;
 
