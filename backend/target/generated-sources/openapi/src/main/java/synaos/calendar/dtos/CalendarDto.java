@@ -17,7 +17,7 @@ import javax.validation.constraints.*;
 /**
  * CalendarDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-04-04T00:24:03.026534800+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-04-04T09:58:42.681433900+02:00[Europe/Berlin]")
 public class CalendarDto extends BaseCalendarDto  {
   @JsonProperty("id")
   private Integer id;

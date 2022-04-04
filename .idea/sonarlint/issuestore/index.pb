@@ -27,3 +27,5 @@ m
 =backend/src/main/java/synaos/calendar/CalendarController.java,6\3\6306d7bd098db3752cec0f603f3a1dd158d24391
 J
 backend/backend.dockerfile,5\9\59b3bcec8bc44be5f9cc7c6d6b857247770a5e57
+X
+(Api-Definitions/All_frontend_config.json,5\c\5cb92d4623fe412fa1f180de03442be9a7b851de
