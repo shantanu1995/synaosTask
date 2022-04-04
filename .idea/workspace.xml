@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d9badc9-7281-4a09-b6fc-53536f8b623d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6306d7bd098db3752cec0f603f3a1dd158d24391" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6306d7bd098db3752cec0f603f3a1dd158d24391" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend.dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/backend.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/synaos/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/synaos/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/api/TestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/api/TestApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/BaseCalendarDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/BaseCalendarDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/BaseCelebrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/BaseCelebrationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CalendarDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CalendarDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CalendarDtoAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CalendarDtoAllOf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CelebrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CelebrationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CelebrationDtoAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/CelebrationDtoAllOf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/ErrorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/ErrorData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/TotalCalendarDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/generated-sources/openapi/src/main/java/synaos/calendar/dtos/TotalCalendarDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/entities/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -46,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+            <state relative-caret-position="493">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -327,6 +310,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -616,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+        <state relative-caret-position="493">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
         </state>
       </provider>
     </entry>

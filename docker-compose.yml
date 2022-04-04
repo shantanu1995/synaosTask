@@ -16,18 +16,18 @@ services:
 
 
   #service 2: definition of your spring-boot app
-  backendservice:                        #it is just a name, which will be used only in this file.
-    image: backend               #name of the image after dockerfile executes
-    container_name: backend-app  #name of the container created from docker image
+  backendservice:
+    image: backend
+    container_name: backend-app
     build:
-      context: .                          #docker file path (. means root directory)
-      dockerfile: backend.dockerfile              #docker file name
+      context: .
+      dockerfile: backend.dockerfile
     ports:
-      - "8084:8084"                       #docker containter port with your os port
+      - "8084:8084"
     restart: always
 
-    depends_on:                           #define dependencies of this app
-      - db                                #dependency name (which is defined with this name 'db' in this file earlier)
+    depends_on:
+      - db                                
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/test?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
